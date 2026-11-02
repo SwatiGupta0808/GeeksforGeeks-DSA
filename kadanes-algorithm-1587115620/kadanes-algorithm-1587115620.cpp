@@ -1,14 +1,15 @@
 class Solution {
   public:
     int maxSubarraySum(vector<int> &arr) {
-        int currSum = arr[0];
-        int maxSum = arr[0];
-
-        for (int i = 1; i < arr.size(); i++) {
-            currSum = max(arr[i], currSum + arr[i]);
-            maxSum = max(maxSum, currSum);
+        // Code here
+        int sum=arr[0];
+        int maxsum=arr[0];
+        int n=arr.size();
+        for(int i=1;i<n;i++)
+        {
+            sum=max(arr[i],sum+arr[i]);
+            maxsum=max(maxsum,sum);
         }
-
-        return maxSum;
+        return maxsum;
     }
 };
